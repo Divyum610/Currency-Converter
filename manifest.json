@@ -1,0 +1,18 @@
+{
+    "manifest_version": 3,
+    "name" : "Currency Converter",
+    "version" : "0.0.1",
+    "action" : {
+        "default_popup" : "popup.html",
+        "default_icon" : "logo.png"
+    },
+    "icons":{
+        "128": "logo.png"
+    },
+    "content_scripts": [{
+    "matches" : ["*://www.amazon.com/*"],
+    "js": ["currency.js"],
+    "html" : ["tooltip.html"]
+  }],
+    "permissions" : ["activeTab"]
+}
